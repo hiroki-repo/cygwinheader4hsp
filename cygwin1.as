@@ -1,5 +1,6 @@
 /*
-Cygwin header for hsp
+Cygwin header for hsp by Gocaine project
+This module is Unlicensed,So you can use it freely!
 Usage: ret=syscall(syscallid,syscallarg1~7)
 ---Syscall ID:Syscall name---
 0000:GetCommandLineA@0
@@ -2351,8 +2352,8 @@ Usage: ret=syscall(syscallid,syscallarg1~7)
 */
 #module cyghsp
 #uselib "cygwin1.dll"
-#func __GetCommandLineA@0__ "GetCommandLineA@0" int,int,int,int,int,int,int
-#func __GetCommandLineW@0__ "GetCommandLineW@0" int,int,int,int,int,int,int
+#func __GetCommandLineA0__ "GetCommandLineA@0" int,int,int,int,int,int,int
+#func __GetCommandLineW0__ "GetCommandLineW@0" int,int,int,int,int,int,int
 #func ___Exit__ "_Exit" int,int,int,int,int,int,int
 #func ____argc__ "__argc" int,int,int,int,int,int,int
 #func ____argv__ "__argv" int,int,int,int,int,int,int
@@ -2575,7 +2576,7 @@ Usage: ret=syscall(syscallid,syscallarg1~7)
 #func ___difftime__ "_difftime" int,int,int,int,int,int,int
 #func ___dirfd__ "_dirfd" int,int,int,int,int,int,int
 #func ___div__ "_div" int,int,int,int,int,int,int
-#func ___dll_crt0@0__ "_dll_crt0@0" int,int,int,int,int,int,int
+#func ___dll_crt00__ "_dll_crt0@0" int,int,int,int,int,int,int
 #func ___drand48__ "_drand48" int,int,int,int,int,int,int
 #func ___drem__ "_drem" int,int,int,int,int,int,int
 #func ___dremf__ "_dremf" int,int,int,int,int,int,int
@@ -4699,11 +4700,11 @@ Usage: ret=syscall(syscallid,syscallarg1~7)
 #defcfunc syscall int prm_0,int prm_1,int prm_2,int prm_3,int prm_4,int prm_5,int prm_6,int prm_7
 switch prm_0
 case 0
-__GetCommandLineA@0__ prm_1,prm_2,prm_3,prm_4,prm_5,prm_6,prm_7
+__GetCommandLineA0__ prm_1,prm_2,prm_3,prm_4,prm_5,prm_6,prm_7
 return stat
 swbreak
 case 1
-__GetCommandLineW@0__ prm_1,prm_2,prm_3,prm_4,prm_5,prm_6,prm_7
+__GetCommandLineW0__ prm_1,prm_2,prm_3,prm_4,prm_5,prm_6,prm_7
 return stat
 swbreak
 case 2
@@ -5595,7 +5596,7 @@ ___div__ prm_1,prm_2,prm_3,prm_4,prm_5,prm_6,prm_7
 return stat
 swbreak
 case 224
-___dll_crt0@0__ prm_1,prm_2,prm_3,prm_4,prm_5,prm_6,prm_7
+___dll_crt00__ prm_1,prm_2,prm_3,prm_4,prm_5,prm_6,prm_7
 return stat
 swbreak
 case 225
